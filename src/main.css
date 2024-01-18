@@ -1,0 +1,901 @@
+@charset "UTF-8";
+/*---------------------------------------------------------------------
+Project: Tienda de jabones
+Version: 1.0
+Last change: 16.11.2023
+Assigned to: Pablo Calvo Jiménez
+
+Component: main
+
+[Table of contents]
+
+1. body
+2. body.no-sidebar
+    - sidebar-container
+    - main-content-container
+3. layout-grid
+    - [MEDIA QUERY]
+4. video-container
+    - video-overlay
+        - video
+        - content
+    - i
+[ANIMACION]: SlideIn
+
+---------------------------------------------------------------------*/
+/*---------------------------------------------------------------------
+Project: Tienda de jabones
+Version: 1.0
+Last change: 16.11.2023
+Assigned to: Pablo Calvo Jiménez
+
+Component: header
+
+[Table of contents]
+
+1. header-container
+    - header-container-up
+        - image-logo
+        - navigation
+            - a
+            - :hover
+        - header-options
+            - a
+                - fa-bell
+        - [MEDIA QUERYS]
+    - header-container-down
+        - scrolling-text-container
+[ANIMACION]: ScrollLeftRight
+[ANIMACION]: Shake
+
+[Color codes]
+
+1. Background color: white
+2. Texto: [color_por_defecto_css]
+3. Link border hover color: white
+
+[Typography]
+
+1. "Exo 2", sans-serif
+---------------------------------------------------------------------*/
+.header-container {
+  display: flex;
+  flex-direction: column;
+  grid-column-start: 1;
+  grid-column-end: 3;
+  grid-row-start: 1;
+  grid-row-end: 2;
+  justify-content: space-between;
+  z-index: 4;
+  position: sticky;
+  top: 0;
+}
+.header-container .header-container-up {
+  display: flex;
+  background-color: #263740;
+  height: 75%;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 1px 1px 28px -10px rgba(0, 0, 0, 0.82);
+}
+@media (max-width: 800px) {
+  .header-container .header-container-up .navigation {
+    display: none !important;
+  }
+}
+@media (min-width: 800px) {
+  .header-container .header-container-up .hamburger-menu {
+    display: none;
+  }
+}
+.header-container .header-container-up .image-logo {
+  width: 60px;
+  height: 60px;
+  padding: 10px;
+}
+.header-container .header-container-up .navigation {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  height: 100%;
+  align-items: center;
+}
+.header-container .header-container-up .navigation a {
+  text-transform: uppercase;
+  text-decoration: none;
+  color: white;
+  font-family: "Exo 2", sans-serif;
+  font-weight: 200;
+  font-size: 1rem;
+}
+.header-container .header-container-up .navigation a:hover {
+  border-top: 3px solid white;
+  border-bottom: 3px solid white;
+}
+.header-container .header-container-up .header-options {
+  display: flex;
+  gap: 20px;
+  padding: 30px;
+  align-content: center;
+}
+.header-container .header-container-up .header-options a {
+  height: 18.5px;
+  text-decoration: none;
+}
+.header-container .header-container-up .header-options a .fa-bell:hover {
+  animation: shake 0.82s cubic-bezier(0.36, 0.07, 0.19, 0.97) both;
+}
+.header-container .header-container-down {
+  display: flex;
+  align-items: center;
+  box-shadow: 1px 1px 28px -10px rgba(0, 0, 0, 0.82);
+  height: 25%;
+  overflow: hidden;
+  background-color: white;
+}
+.header-container .header-container-down .scrolling-text-container {
+  font-family: "Exo 2", sans-serif;
+  color: gray;
+  font-weight: 200;
+  white-space: nowrap;
+  animation: scrollLeftRight 60s linear infinite;
+}
+
+@keyframes scrollLeftRight {
+  0%, 100% {
+    transform: translateX(0%);
+  }
+  99% {
+    transform: translateX(-100%);
+  }
+}
+@keyframes shake {
+  10%, 90% {
+    transform: translate3d(-1px, 0, 0);
+  }
+  20%, 80% {
+    transform: translate3d(2px, 0, 0);
+  }
+  30%, 50%, 70% {
+    transform: translate3d(-4px, 0, 0);
+  }
+  40%, 60% {
+    transform: translate3d(4px, 0, 0);
+  }
+}
+/*---------------------------------------------------------------------
+Project: Tienda de jabones
+Version: 1.0
+Last change: 16.11.2023
+Assigned to: Pablo Calvo Jiménez
+
+Component: footer
+
+[Table of contents]
+
+1. footer-container
+    - footer-cliente
+        - a
+    - footer-company
+        - a
+    - footer-social-media
+        - img
+    - creative-commons-zero
+        - img
+
+[Color codes]
+
+1. Background color: white
+2. Texto: [color_por_defecto_css]
+
+[Typography]
+
+1. "Exo 2", sans-serif
+---------------------------------------------------------------------*/
+.footer-container {
+  display: flex;
+  background-color: #263740;
+  width: 100%;
+  height: 100%;
+  grid-column-start: 1;
+  grid-column-end: 3;
+  grid-row-start: 3;
+  grid-row-end: 3;
+  box-shadow: 1px 1px 28px -10px rgba(0, 0, 0, 0.82);
+  justify-content: space-around;
+}
+@media (max-width: 600px) {
+  .footer-container div {
+    font-size: 10px;
+  }
+}
+.footer-container .footer-cliente {
+  font-family: "Exo 2", sans-serif;
+  padding: 10px;
+  text-align: center;
+  color: white;
+}
+.footer-container .footer-cliente a {
+  color: white;
+  text-decoration: none;
+}
+.footer-container .footer-company {
+  font-family: "Exo 2", sans-serif;
+  color: white;
+  padding: 10px;
+  text-align: center;
+}
+.footer-container .footer-company a {
+  color: white;
+  text-decoration: none;
+}
+.footer-container .footer-social-media {
+  font-family: "Exo 2", sans-serif;
+  color: white;
+  padding: 10px;
+  text-align: center;
+}
+.footer-container .footer-social-media img {
+  width: 30px;
+  height: 30px;
+}
+.footer-container .creative-commons-zero {
+  font-family: "Exo 2", sans-serif;
+  color: white;
+  padding: 10px;
+  text-align: center;
+}
+.footer-container .creative-commons-zero img {
+  width: 80px;
+  padding: 10px;
+}
+
+/*---------------------------------------------------------------------
+Project: Tienda de jabones
+Version: 1.0
+Last change: 16.11.2023
+Assigned to: Pablo Calvo Jiménez
+
+Component: main-content
+
+[Table of contents]
+
+1. main-content-container
+
+[Color codes]
+
+1. Background color: white
+    - [MEDIA QUERY]
+
+[Typography]
+
+1. "Exo 2", sans-serif
+---------------------------------------------------------------------*/
+.main-content-container {
+  background-color: white;
+  width: 100%;
+  height: 100%;
+  grid-column-start: 2;
+  grid-column-end: 3;
+  grid-row-start: 2;
+  grid-row-end: 2;
+  box-shadow: 1px 1px 28px -10px rgba(0, 0, 0, 0.82);
+}
+@media (max-width: 600px) {
+  .main-content-container {
+    grid-column-start: 1;
+  }
+}
+
+/*---------------------------------------------------------------------
+Project: Tienda de jabones
+Version: 1.0
+Last change: 16.11.2023
+Assigned to: Pablo Calvo Jiménez
+
+Component: sidebar
+
+[Table of contents]
+
+1. sidebar-container
+
+[Color codes]
+
+1. Background color: white
+    - sidebar-categorys-and-filters
+        - sidebar-categorys
+            - h2
+            - div
+    - black-friday-discount
+    - [MEDIA QUERY]
+
+[Color codes]
+
+1. Background color: white
+2. Texto: 
+
+[Typography]
+
+1. "Exo 2", sans-serif
+---------------------------------------------------------------------*/
+.sidebar-container {
+  background-color: white;
+  width: 100%;
+  height: 100%;
+  grid-column-start: 1;
+  grid-column-end: 2;
+  grid-row-start: 2;
+  grid-row-end: 3;
+  box-shadow: 1px 1px 28px -10px rgba(0, 0, 0, 0.82);
+  z-index: 3;
+}
+.sidebar-container .sidebar-categorys-and-filters {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  height: 100%;
+  padding-left: 10px;
+  padding-right: 10px;
+  font-family: "Exo 2", sans-serif;
+  color: rgb(93, 93, 93);
+}
+.sidebar-container .sidebar-categorys-and-filters .sidebar-categorys h2 {
+  margin-top: 0px;
+}
+.sidebar-container .sidebar-categorys-and-filters .sidebar-categorys div {
+  display: flex;
+  justify-content: space-between;
+  padding: 7px;
+  border-bottom: 1px solid rgb(93, 93, 93);
+}
+.sidebar-container .black-friday-discount {
+  text-align: center;
+}
+.sidebar-container .black-friday-discount img {
+  width: -moz-fit-content;
+  width: fit-content;
+  height: 290px;
+  box-shadow: 1px 1px 28px -10px rgba(0, 0, 0, 0.82);
+}
+@media (max-width: 600px) {
+  .sidebar-container {
+    display: none;
+  }
+}
+
+/*---------------------------------------------------------------------
+Project: Tienda de jabones
+Version: 1.0
+Last change: 16.11.2023
+Assigned to: Pablo Calvo Jiménez
+
+Component: buttons
+
+[Table of contents]
+
+1. button-catalogo
+    - :hover
+    - :active
+
+2. button-register
+    - :active
+
+[Color codes]
+
+1. Text color: white
+2. Background color: #263740
+3. Border color: #263740
+
+[Typography]
+
+Typography: 
+
+1. "Exo 2", sans-serif
+---------------------------------------------------------------------*/
+.button-catalogo {
+  background-color: #263740;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  font-family: "Exo 2", sans-serif;
+  cursor: pointer;
+  font-size: 16px;
+  text-align: center;
+  text-decoration: none;
+  border: 3px solid #263740;
+}
+.button-catalogo:hover {
+  background-color: #1f2528;
+}
+.button-catalogo:active {
+  color: gray;
+  background-color: white;
+}
+
+.button-register {
+  background-color: #263740;
+  width: 100%;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  font-family: "Exo 2", sans-serif;
+  cursor: pointer;
+  font-size: 16px;
+  text-align: center;
+  text-decoration: none;
+  border: 3px solid #263740;
+}
+.button-register:active {
+  color: gray;
+  background-color: white;
+}
+
+/*---------------------------------------------------------------------
+Project: Tienda de jabones
+Version: 1.0
+Last change: 16.11.2023
+Assigned to: Pablo Calvo Jiménez
+
+Component: cards
+
+[Table of contents]
+
+1. jabon
+    - div
+    - img
+    - p
+    - price
+
+[Color codes]
+
+1. Background color: white
+2. Texto: [color_por_defecto_css]
+
+[Typography]
+
+1. "Exo 2", sans-serif
+---------------------------------------------------------------------*/
+.jabon {
+  min-width: 300px;
+  min-height: 300px;
+  width: 60%;
+  height: 236px;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  border-radius: 20px;
+  font-family: "Exo 2", sans-serif;
+  padding: 5px;
+  text-align: center;
+  box-shadow: 1px 1px 28px -10px rgba(0, 0, 0, 0.82);
+}
+.jabon div {
+  font-weight: bold;
+}
+.jabon img {
+  width: 135px;
+  height: 135px;
+  border-radius: 20px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+@media (max-width: 600px) {
+  .jabon img {
+    min-width: 100px;
+    width: 10%;
+  }
+}
+.jabon p {
+  margin-top: 0;
+  font-size: 10px;
+}
+.jabon .price::after {
+  content: "€";
+}
+@media (max-width: 600px) {
+  .jabon {
+    width: 10%;
+    min-width: 150px;
+    min-height: 300px;
+  }
+}
+
+/*---------------------------------------------------------------------
+Project: Tienda de jabones
+Version: 1.0
+Last change: 16.11.2023
+Assigned to: Pablo Calvo Jiménez
+
+Component: catalog
+
+[Table of contents]
+
+1. sidebar-container
+
+[Color codes]
+
+1. catalog-h1
+2. catalog
+    - [MEDIA QUERYS]
+
+[Color codes]
+
+1. Background color: white
+2. Texto: rgb(93, 93, 93)
+
+[Typography]
+
+1. "Exo 2", sans-serif
+---------------------------------------------------------------------*/
+/*---------------------------------------------------------------------
+Project: Tienda de jabones
+Version: 1.0
+Last change: 16.11.2023
+Assigned to: Pablo Calvo Jiménez
+
+Component: cards
+
+[Table of contents]
+
+1. jabon
+    - div
+    - img
+    - p
+    - price
+
+[Color codes]
+
+1. Background color: white
+2. Texto: [color_por_defecto_css]
+
+[Typography]
+
+1. "Exo 2", sans-serif
+---------------------------------------------------------------------*/
+.jabon {
+  min-width: 300px;
+  min-height: 300px;
+  width: 60%;
+  height: 236px;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  border-radius: 20px;
+  font-family: "Exo 2", sans-serif;
+  padding: 5px;
+  text-align: center;
+  box-shadow: 1px 1px 28px -10px rgba(0, 0, 0, 0.82);
+}
+.jabon div {
+  font-weight: bold;
+}
+.jabon img {
+  width: 135px;
+  height: 135px;
+  border-radius: 20px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+@media (max-width: 600px) {
+  .jabon img {
+    min-width: 100px;
+    width: 10%;
+  }
+}
+.jabon p {
+  margin-top: 0;
+  font-size: 10px;
+}
+.jabon .price::after {
+  content: "€";
+}
+@media (max-width: 600px) {
+  .jabon {
+    width: 10%;
+    min-width: 150px;
+    min-height: 300px;
+  }
+}
+
+/*---------------------------------------------------------------------
+Project: Tienda de jabones
+Version: 1.0
+Last change: 16.11.2023
+Assigned to: Pablo Calvo Jiménez
+
+Component: buttons
+
+[Table of contents]
+
+1. button-catalogo
+    - :hover
+    - :active
+
+2. button-register
+    - :active
+
+[Color codes]
+
+1. Text color: white
+2. Background color: #263740
+3. Border color: #263740
+
+[Typography]
+
+Typography: 
+
+1. "Exo 2", sans-serif
+---------------------------------------------------------------------*/
+.button-catalogo {
+  background-color: #263740;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  font-family: "Exo 2", sans-serif;
+  cursor: pointer;
+  font-size: 16px;
+  text-align: center;
+  text-decoration: none;
+  border: 3px solid #263740;
+}
+.button-catalogo:hover {
+  background-color: #1f2528;
+}
+.button-catalogo:active {
+  color: gray;
+  background-color: white;
+}
+
+.button-register {
+  background-color: #263740;
+  width: 100%;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  font-family: "Exo 2", sans-serif;
+  cursor: pointer;
+  font-size: 16px;
+  text-align: center;
+  text-decoration: none;
+  border: 3px solid #263740;
+}
+.button-register:active {
+  color: gray;
+  background-color: white;
+}
+
+.catalog-h1 {
+  text-align: center;
+  background-color: white;
+  color: rgb(93, 93, 93);
+  font-family: "Exo 2", sans-serif;
+  box-shadow: 1px 1px 28px -10px rgba(0, 0, 0, 0.82);
+}
+
+.catalog {
+  display: grid;
+  justify-items: center;
+  align-content: center;
+  row-gap: 20px;
+  gap: 10px;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+@media (max-width: 1024px) and (min-width: 600px) {
+  .catalog {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media (max-width: 600px) {
+  .catalog {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.video-overlay {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  z-index: 10;
+  background-color: #ffffff;
+  color: #000000;
+  border: none;
+  padding: 10px 20px;
+}
+.video-overlay #video {
+  width: 100%;
+  height: 100%;
+}
+
+/*---------------------------------------------------------------------
+Project: Tienda de jabones
+Version: 1.0
+Last change: 16.11.2023
+Assigned to: Pablo Calvo Jiménez
+
+Component: register
+
+[Table of contents]
+
+1. registro-container
+    - registro
+    - form div
+        - label
+            - [MEDIA QUERY]
+        - input
+            - [MEDIA QUERYS]
+            - :required
+                - :invalid + span::after
+                - :valid + span::after
+            - :invalid
+            - :valid
+            - :focus
+    - h1
+
+[Color codes]
+
+1. H1 text color: gray
+2. Background color: #263740
+3. Button border color: #263740
+4. Text color: #263740
+
+[Typography]
+
+1. "Exo 2", sans-serif
+---------------------------------------------------------------------*/
+.registro-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+.registro-container .registro {
+  padding: 11px;
+  width: 70%;
+  height: -moz-fit-content;
+  height: fit-content;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 1px 1px 28px -10px rgba(0, 0, 0, 0.82);
+}
+.registro-container .registro form div label {
+  font-family: "Exo 2", sans-serif;
+  display: block;
+  width: 100%;
+}
+@media (max-width: 600px) {
+  .registro-container .registro form div label {
+    font-size: 1rem;
+  }
+}
+.registro-container .registro form div input {
+  width: 98%;
+  border: 2px solid #263740;
+  border-radius: 4px;
+  color: #263740;
+  height: 25px;
+}
+@media (max-width: 1350px) {
+  .registro-container .registro form div input {
+    width: 96%;
+    height: 20px;
+  }
+}
+@media (max-width: 675px) {
+  .registro-container .registro form div input {
+    width: 92%;
+    height: 20px;
+  }
+}
+.registro-container .registro form div input:required:invalid + span::after {
+  font-family: "Exo 2", sans-serif;
+  color: red;
+  content: "*";
+}
+.registro-container .registro form div input:required:valid + span::after {
+  font-family: "Exo 2", sans-serif;
+  color: rgb(64, 255, 0);
+  content: "*";
+}
+.registro-container .registro form div input:invalid {
+  border: 2px solid red;
+}
+.registro-container .registro form div input:valid {
+  border: 2px solid rgb(64, 255, 0);
+}
+.registro-container .registro form div input:focus {
+  outline: none;
+}
+.registro-container .registro h1 {
+  text-align: center;
+  font-family: "Exo 2", sans-serif;
+  color: rgb(93, 93, 93);
+}
+
+body {
+  margin: 0;
+  height: 100%;
+  min-width: 400px;
+}
+
+body.no-sidebar .sidebar-container {
+  display: none;
+}
+body.no-sidebar .main-content-container {
+  grid-column-start: 1;
+}
+
+.layout-grid {
+  display: grid;
+  height: 100vh;
+  grid-template-columns: 230px 1fr;
+  grid-template-rows: 105px 1fr 150px;
+}
+@media (max-width: 600px) {
+  .layout-grid {
+    grid-template-rows: 105px 1fr 200px;
+  }
+}
+
+.video-container {
+  align-items: center;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  z-index: 10000;
+  box-sizing: border-box;
+}
+.video-container .video-overlay {
+  display: flex;
+  height: 99%;
+  width: 99%;
+  position: relative;
+  top: 5px;
+  left: 5px;
+  right: 5px;
+  bottom: 5px;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  z-index: 10;
+  box-sizing: border-box;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+.video-container .video-overlay #video {
+  width: 80%;
+  height: 70%;
+  z-index: 999;
+}
+.video-container .video-overlay .content {
+  position: fixed;
+  bottom: -100%;
+  background: rgba(0, 0, 0, 0.9);
+  color: #f1f1f1;
+  width: 90%;
+  padding: 20px;
+  z-index: 1000;
+  animation: slideIn 0.5s ease 3s forwards;
+}
+.video-container i {
+  position: absolute;
+  top: 20px;
+  left: 10px;
+  z-index: 1000;
+  cursor: pointer;
+}
+
+@keyframes slideIn {
+  from {
+    bottom: -100%;
+  }
+  to {
+    bottom: 10px;
+  }
+}/*# sourceMappingURL=main.css.map */

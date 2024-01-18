@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../main.css">
+    <script src="https://kit.fontawesome.com/197249a77d.js" crossorigin="anonymous"></script>
+    <title>SOAPP</title>
+  </head>
+  <body class="no-sidebar">
+    <div class="layout-grid">
+      <header class="header-container">
+        <div class="header-container-up">
+          <img
+            class="image-logo"
+            src="multimedia/imagen_logo.svg"
+            alt="Logo de la tienda"
+          >
+          <!-- Se ve en pantallas mayores a 800px-->
+          <nav class="navigation">
+            <div><a href="./index.html">Catalogo</a></div>
+            <div><a href="#">Colecciones</a></div>
+            <div><a href="#">Ofertas</a></div>
+            <div><a href="#">Contacto</a></div>
+            <div><a href="#">Ayuda</a></div>
+          </nav>
+          <!-- Se ve en pantallas menores a 800px-->
+          <i class="fa-solid fa-bars hamburger-menu fa-xl" style="color: #ffffff;"></i>
+          <div class="header-options">
+            <a href="#"><i class="fa-solid fa-bell" style="color: #ffffff;"></i></a>
+            <a href="#"><i class="fa-solid fa-cart-shopping" style="color: #ffffff;"></i></a>
+            <a href="#"><i class="fa-solid fa-magnifying-glass" style="color: #ffffff;"></i></a>
+            <a href="./registro.html"><i class="fa-solid fa-right-to-bracket" style="color: #ffffff;"></i></a>
+          </div>
+        </div>
+        <div class="header-container-down">
+          <div class="scrolling-text-container">
+            <!-- Pongo muchos ya que esto se hace con JavaScript y quiero que se llegue a ver el efecto -->
+            <div class="scrolling-text">
+              ¡Actualmente estamos realizando una oferta! ¡Obtén hasta un 30% de
+              descuento en todos los jabones! ¡Échale un vistazo! 🎉 · ¡Actualmente estamos realizando una oferta! ¡Obtén hasta un 30% de
+              descuento en todos los jabones! ¡Échale un vistazo! 🎉 · ¡Actualmente estamos realizando una oferta! ¡Obtén hasta un 30% de
+              descuento en todos los jabones! ¡Échale un vistazo! 🎉 · ¡Actualmente estamos realizando una oferta! ¡Obtén hasta un 30% de
+              descuento en todos los jabones! ¡Échale un vistazo! 🎉 · ¡Actualmente estamos realizando una oferta! ¡Obtén hasta un 30% de
+              descuento en todos los jabones! ¡Échale un vistazo! 🎉 · ¡Actualmente estamos realizando una oferta! ¡Obtén hasta un 30% de
+              descuento en todos los jabones! ¡Échale un vistazo! 🎉 · ¡Actualmente estamos realizando una oferta! ¡Obtén hasta un 30% de
+              descuento en todos los jabones! ¡Échale un vistazo! 🎉
+            </div>
+          </div>
+        </div>
+      </header>
+      <div class="sidebar-container">
+        <div class="sidebar-categorys-and-filters">
+          <div class="sidebar-categorys">
+            <h1>Categorias</h1>
+          <div>Jabones naturales
+            <input type="checkbox" name="jabones-naturales">
+          </div>
+          <div>Jabones veganos
+            <input type="checkbox" name="jabones-veganos">
+          </div>
+          <div>Jabones de glicerina
+            <input type="checkbox" name="jabones-glicerina">
+          </div>
+          <div>Jabones para pieles sensibles
+            <input type="checkbox" name="jabones-pieles-sensibles">
+          </div>
+        </div>
+          <div class="filter-container">
+            <h1>Filtros</h1>
+            <label for="min-price">Precio mínimo:</label>
+            <input type="range" id="min-price" min="0" max="15" value="0">
+            <span id="min-price-value">0€</span>
+            <br>
+            <label for="max-price">Precio máximo:</label>
+            <input type="range" id="max-price" min="0" max="15" value="15">
+            <span id="max-price-value">15€</span>
+          </div>
+          <div class="sorting-options">
+            <h1>Ordenar por:</h1>
+            <label for="rango-1">Precio de mayor a menor</label>
+            <input type="radio" id="rango-1">
+            <label for="rango-2">Precio de menor a mayor</label>
+            <input type="radio" id="rango-2">
+          </div>
+        </div>
+      </div>
+      <div class="main-content-container">
+        <div class="registro-container">
+          <div class="registro">
+            <h1>Registro</h1>
+            <form action="catalogo.html">
+            <div>
+              <label for="nombre">Nombre:</label>
+              <input type="text" id="nombre" name="nombre" maxlength="20" pattern="Pablo" required>
+              <span></span>
+            </div>
+            <div>
+              <label for="apellidos">Apellidos:</label>
+              <input type="text" id="apellidos" name="apellidos" maxlength="40" pattern="Calvo Jiménez" required>
+              <span></span>
+            </div>
+            <div>
+              <label for="email">Email:</label>
+              <input type="email" id="email" name="email" required>
+              <span></span>
+            </div>
+            <div>
+              <label for="password">Contraseña:</label>
+              <input type="password" id="password" name="password" pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[$@$!%*?&.])[A-Za-z\d$@$!%*?&.].{8,}" required>
+              <span></span>
+            </div>
+            <div>
+              <label for="telefono">Número de Teléfono:</label>
+              <input type="text" id="telefono" name="telefono" pattern="^\+\d{2}-\d{3}-\d{3}-\d{3}$">
+            </div>
+            <div>
+              <label for="fechaNacimiento">Fecha de Nacimiento:</label>
+              <input type="date" id="fechaNacimiento" name="fechaNacimiento" max="2005-11-16">
+            </div>
+            <div>
+              <label for="urlWeb">URL de Página Web:</label>
+              <input type="url" id="urlWeb" name="urlWeb" pattern="https://pablo-calvojimenez.com">
+            </div>
+            <br><br>
+            <button class="button-register" type="submit">Registrarse</button>
+          </form>
+          </div>
+        </div>
+      </div>
+      <div class="footer-container">
+        <div class="footer-cliente">
+          <h2>SOAPP</h2>
+          <a href="#"><div>Tiendas</div></a>
+          <a href="#"><div>Envios</div></a>
+          <a href="#"><div>Cambios y devoluciones</div></a>
+        </div>
+        <div class="footer-company">
+          <h2>Compañia</h2>
+          <a href="#"><div>Politica de cookies</div></a>
+          <a href="#"><div>Politica de privacidad</div></a>
+          <a href="#"><div>Cambios y devoluciones</div></a>
+        </div>
+        <div class="footer-social-media">
+          <h2>Redes sociales</h2>
+          <a href="#"><img src="multimedia/imagen_instagram.svg" alt="Instagram"></a>
+          <a href="#"><img src="multimedia/imagen_twitter.svg" alt="Twitter"></a>
+          <a href="#"><img src="multimedia/imagen_facebook.svg" alt="Facebook"></a>
+        </div>
+        <div class="creative-commons-zero">
+          <h2>Licencia</h2>
+          <a href="https://creativecommons.org/publicdomain/zero/1.0/deed.es"><img src="multimedia/creative_commons_zero.png" alt="Creative Commons Zero"></a>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
