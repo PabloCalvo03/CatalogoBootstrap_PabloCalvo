@@ -1,0 +1,1 @@
+import"../main.scss";import*as bootstrap from"bootstrap";import Alert from"bootstrap/js/dist/alert";import{Toast}from"bootstrap";const toastTrigger=document.getElementById("liveToastBtn"),toastLiveExample=document.getElementById("liveToast");toastTrigger&&toastTrigger.addEventListener("click",(()=>{new Toast(toastLiveExample).show()}));

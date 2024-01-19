@@ -1,0 +1,37 @@
+/*---------------------------------------------------------------------
+Project: Tienda de jabones
+Version: 1.0
+Last change: 16.11.2023
+Assigned to: Pablo Calvo Jiménez
+
+Component: cards
+
+[Table of contents]
+
+1. jabon
+    - div
+    - img
+    - p
+    - price
+
+[Color codes]
+
+1. Background color: white
+2. Texto: [color_por_defecto_css]
+
+[Typography]
+
+1. "Exo 2", sans-serif
+---------------------------------------------------------------------*/
+
+.card-img-top{
+    height: 250px;
+    object-fit: cover
+}
+
+.price{
+    &::after{
+        content: "€";
+    }
+}
+

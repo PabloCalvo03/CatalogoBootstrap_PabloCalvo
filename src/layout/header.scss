@@ -1,0 +1,15 @@
+@mixin scrollLeftRight {
+    animation: scrollLeftRight 60s linear infinite;
+}
+
+@keyframes scrollLeftRight {
+    0%,100% {
+        transform: translateX(0%);
+    }
+    99% {
+        transform: translateX(-100%);
+    }
+}
+.animateScrollLeftRight {
+    @include scrollLeftRight
+}
