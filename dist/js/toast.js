@@ -1,0 +1,1 @@
+import{Toast}from"bootstrap";const toastTrigger=document.getElementById("liveToastBtn"),toastLiveExample=document.getElementById("liveToast");toastTrigger&&toastTrigger.addEventListener("click",(()=>{new Toast(toastLiveExample).show()}));
