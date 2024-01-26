@@ -1,157 +1,130 @@
 <!DOCTYPE html>
 <html lang="es">
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../main.css">
-    <script src="https://kit.fontawesome.com/197249a77d.js" crossorigin="anonymous"></script>
-    <title>SOAPP</title>
-  </head>
-  <body class="no-sidebar">
-    <div class="layout-grid">
-      <header class="header-container">
-        <div class="header-container-up">
-          <img
-            class="image-logo"
-            src="multimedia/imagen_logo.svg"
-            alt="Logo de la tienda"
-          >
-          <!-- Se ve en pantallas mayores a 800px-->
-          <nav class="navigation">
-            <div><a href="./index.html">Catalogo</a></div>
-            <div><a href="#">Colecciones</a></div>
-            <div><a href="#">Ofertas</a></div>
-            <div><a href="#">Contacto</a></div>
-            <div><a href="#">Ayuda</a></div>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../main.css">
+  <script src="https://kit.fontawesome.com/197249a77d.js" crossorigin="anonymous"></script>
+  <title>SOAPP</title>
+</head>
+
+<body>
+    <div class="toast-container position-fixed bottom-0 end-0 p-3">
+        <div id="liveToast" class="toast" role="alert" aria-live="assertive" aria-atomic="true">
+          <div class="toast-header">
+            <img src="./multimedia/imagen_logo.svg" style="background-color: black;" class="rounded me-2" alt="...">
+            <strong class="me-auto">Notificaciones activadas</strong>
+            <small>11 mins ago</small>
+            <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+          </div>
+          <div class="toast-body">
+            Las notificaciones de Soapp han sido activadas
+          </div>
+        </div>
+      </div>
+      <div class="container-fluid">
+        <div class="row">
+          <nav class="nav navbar bg-primary shadow z-2">
+            <div class="nav-item col-2 ps-5">
+              <img src="multimedia/imagen_logo.svg" alt="Logo de la tienda">
+            </div>
+            <i class="col-lg-4 d-block d-lg-none bi bi-list text-white h1 my-0"></i>
+            <div class=" col-lg-4 d-none d-lg-block nav-item col-4 d-flex justify-content-start" id="navbarNav">
+              <ul class="d-flex list-unstyled my-0">
+                <li class="nav-item">
+                  <a class="nav-link text-white" href="./index.html">Catalogo</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link text-white" href="#">Colecciones</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link text-white" href="#">Ofertas</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link text-white" href="#">Contacto</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link text-white" href="#">Ayuda</a>
+                </li>
+              </ul>
+            </div>
+            <div class="nav-item col-4 d-flex justify-content-end px-5">
+              <ul class="d-flex list-unstyled my-0 justify-content-between">
+                <li>
+                  <a href="./graficas.html"><i class="bi bi-bar-chart-line text-white h5 my-0"></i></a>
+                </li>
+                <li class="ps-4">
+                  <a href="#" id="liveToastBtn"><i class="bi bi-bell text-white h5 my-0"></i></i></a>
+                </li>
+                <li class="ps-4">
+                  <a href="#"><i class="bi bi-bag text-white h5  my-0"></i></a>
+                </li>
+                <li class="ps-4">
+                  <a href="#"><i class="bi bi-search text-white h5 my-0"></i></a>
+                </li>
+                <li class="ps-4">
+                  <a href="./registro.html" class="active"><i class="bi bi-door-open h5 text-white  my-0"></i></i></a>
+                </li>
+              </ul>
+            </div>
           </nav>
-          <!-- Se ve en pantallas menores a 800px-->
-          <i class="fa-solid fa-bars hamburger-menu fa-xl" style="color: #ffffff;"></i>
-          <div class="header-options">
-            <a href="#"><i class="fa-solid fa-bell" style="color: #ffffff;"></i></a>
-            <a href="#"><i class="fa-solid fa-cart-shopping" style="color: #ffffff;"></i></a>
-            <a href="#"><i class="fa-solid fa-magnifying-glass" style="color: #ffffff;"></i></a>
-            <a href="./registro.html"><i class="fa-solid fa-right-to-bracket" style="color: #ffffff;"></i></a>
-          </div>
-        </div>
-        <div class="header-container-down">
-          <div class="scrolling-text-container">
-            <!-- Pongo muchos ya que esto se hace con JavaScript y quiero que se llegue a ver el efecto -->
-            <div class="scrolling-text">
-              ¡Actualmente estamos realizando una oferta! ¡Obtén hasta un 30% de
-              descuento en todos los jabones! ¡Échale un vistazo! 🎉 · ¡Actualmente estamos realizando una oferta! ¡Obtén hasta un 30% de
-              descuento en todos los jabones! ¡Échale un vistazo! 🎉 · ¡Actualmente estamos realizando una oferta! ¡Obtén hasta un 30% de
-              descuento en todos los jabones! ¡Échale un vistazo! 🎉 · ¡Actualmente estamos realizando una oferta! ¡Obtén hasta un 30% de
-              descuento en todos los jabones! ¡Échale un vistazo! 🎉 · ¡Actualmente estamos realizando una oferta! ¡Obtén hasta un 30% de
-              descuento en todos los jabones! ¡Échale un vistazo! 🎉 · ¡Actualmente estamos realizando una oferta! ¡Obtén hasta un 30% de
-              descuento en todos los jabones! ¡Échale un vistazo! 🎉 · ¡Actualmente estamos realizando una oferta! ¡Obtén hasta un 30% de
-              descuento en todos los jabones! ¡Échale un vistazo! 🎉
+          <div class="col-md-12 overflow-hidden shadow z-2">
+            <div class="animateScrollLeftRight text-nowrap">
+              ¡Actualmente estamos realizando una oferta! ¡Obtén hasta un 30% de descuento en todos los jabones! ¡Échale un
+              vistazo! 🎉 · ¡Actualmente estamos realizando una oferta! ¡Obtén hasta un 30% de descuento en todos los
+              jabones! ¡Échale un vistazo! 🎉 · ¡Actualmente estamos realizando una oferta! ¡Obtén hasta un 30% de descuento en
+              todos los jabones! ¡Échale un vistazo! 🎉 · ¡Actualmente estamos realizando una oferta! ¡Obtén hasta un 30% de
+              descuento en todos los jabones! ¡Échale un vistazo! 🎉 · ¡Actualmente estamos realizando una oferta! ¡Obtén hasta
+              un 30% de descuento en todos los jabones! ¡Échale un vistazo! 🎉 · ¡Actualmente estamos realizando una oferta!
+              ¡Obtén hasta un 30% de descuento en todos los jabones! ¡Échale un vistazo! 🎉 · ¡Actualmente estamos realizando
+              una oferta! ¡Obtén hasta un 30% de descuento en todos los jabones! ¡Échale un vistazo! 🎉 ·
             </div>
           </div>
         </div>
-      </header>
-      <div class="sidebar-container">
-        <div class="sidebar-categorys-and-filters">
-          <div class="sidebar-categorys">
-            <h1>Categorias</h1>
-          <div>Jabones naturales
-            <input type="checkbox" name="jabones-naturales">
-          </div>
-          <div>Jabones veganos
-            <input type="checkbox" name="jabones-veganos">
-          </div>
-          <div>Jabones de glicerina
-            <input type="checkbox" name="jabones-glicerina">
-          </div>
-          <div>Jabones para pieles sensibles
-            <input type="checkbox" name="jabones-pieles-sensibles">
-          </div>
+        <div class="row">
+          <main class="col-md-12 shadow my-0 p-3 mb-0 bg-white">
+            
+            <nav aria-label="breadcrumb">
+              <ol class="breadcrumb">
+                <li class="breadcrumb-item active" aria-current="page"><a href="#">Home</a></li>
+                <li class="breadcrumb-item">Catalogo</li>
+              </ol>
+            </nav>
+            <div>
+            
+          </main>
         </div>
-          <div class="filter-container">
-            <h1>Filtros</h1>
-            <label for="min-price">Precio mínimo:</label>
-            <input type="range" id="min-price" min="0" max="15" value="0">
-            <span id="min-price-value">0€</span>
-            <br>
-            <label for="max-price">Precio máximo:</label>
-            <input type="range" id="max-price" min="0" max="15" value="15">
-            <span id="max-price-value">15€</span>
+        <div class="row">
+          <footer class="d-flex p-3 bg-primary justify-content-between">
+            <div class="col-md-3 text-center text-white">
+              <h2 class="mb-4">SOAPP</h2>
+              <a href="#" class="text-light text-decoration-none d-block mb-2">Tiendas</a>
+              <a href="#" class="text-light text-decoration-none d-block mb-2">Envios</a>
+              <a href="#" class="text-light text-decoration-none d-block mb-2">Cambios y devoluciones</a>
           </div>
-          <div class="sorting-options">
-            <h1>Ordenar por:</h1>
-            <label for="rango-1">Precio de mayor a menor</label>
-            <input type="radio" id="rango-1">
-            <label for="rango-2">Precio de menor a mayor</label>
-            <input type="radio" id="rango-2">
+          <div class="col-md-3 text-center text-white">
+              <h2 class="mb-4">Compañia</h2>
+              <a href="#" class="text-light text-decoration-none d-block mb-2">Politica de cookies</a>
+              <a href="#" class="text-light text-decoration-none d-block mb-2">Politica de privacidad</a>
+              <a href="#" class="text-light text-decoration-none d-block mb-2">Cambios y devoluciones</a>
           </div>
+          <div class="col-md-3 text-center text-white">
+              <h2 class="mb-4">Redes sociales</h2>
+              <a href="#" class="text-light"><i class="bi bi-instagram h1"></i></a>
+              <a href="#" class="text-light"><i class="bi bi-twitter-x h1"></i></a>
+              <a href="#" class="text-light"><i class="bi bi-facebook h1"></i></a>
+          </div>
+          <div class="col-md-3 text-center text-white z-2">
+              <h2 class="mb-4">Licencia</h2>
+              <a href="https://creativecommons.org/publicdomain/zero/1.0/deed.es" class="text-light">
+                  <img src="./multimedia/creative_commons_zero.png" width="100px" alt="Creative Commons Zero">
+              </a>
+          </div>
+          </footer>
         </div>
       </div>
-      <div class="main-content-container">
-        <div class="registro-container">
-          <div class="registro">
-            <h1>Registro</h1>
-            <form action="catalogo.html">
-            <div>
-              <label for="nombre">Nombre:</label>
-              <input type="text" id="nombre" name="nombre" maxlength="20" pattern="Pablo" required>
-              <span></span>
-            </div>
-            <div>
-              <label for="apellidos">Apellidos:</label>
-              <input type="text" id="apellidos" name="apellidos" maxlength="40" pattern="Calvo Jiménez" required>
-              <span></span>
-            </div>
-            <div>
-              <label for="email">Email:</label>
-              <input type="email" id="email" name="email" required>
-              <span></span>
-            </div>
-            <div>
-              <label for="password">Contraseña:</label>
-              <input type="password" id="password" name="password" pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[$@$!%*?&.])[A-Za-z\d$@$!%*?&.].{8,}" required>
-              <span></span>
-            </div>
-            <div>
-              <label for="telefono">Número de Teléfono:</label>
-              <input type="text" id="telefono" name="telefono" pattern="^\+\d{2}-\d{3}-\d{3}-\d{3}$">
-            </div>
-            <div>
-              <label for="fechaNacimiento">Fecha de Nacimiento:</label>
-              <input type="date" id="fechaNacimiento" name="fechaNacimiento" max="2005-11-16">
-            </div>
-            <div>
-              <label for="urlWeb">URL de Página Web:</label>
-              <input type="url" id="urlWeb" name="urlWeb" pattern="https://pablo-calvojimenez.com">
-            </div>
-            <br><br>
-            <button class="button-register" type="submit">Registrarse</button>
-          </form>
-          </div>
-        </div>
-      </div>
-      <div class="footer-container">
-        <div class="footer-cliente">
-          <h2>SOAPP</h2>
-          <a href="#"><div>Tiendas</div></a>
-          <a href="#"><div>Envios</div></a>
-          <a href="#"><div>Cambios y devoluciones</div></a>
-        </div>
-        <div class="footer-company">
-          <h2>Compañia</h2>
-          <a href="#"><div>Politica de cookies</div></a>
-          <a href="#"><div>Politica de privacidad</div></a>
-          <a href="#"><div>Cambios y devoluciones</div></a>
-        </div>
-        <div class="footer-social-media">
-          <h2>Redes sociales</h2>
-          <a href="#"><img src="multimedia/imagen_instagram.svg" alt="Instagram"></a>
-          <a href="#"><img src="multimedia/imagen_twitter.svg" alt="Twitter"></a>
-          <a href="#"><img src="multimedia/imagen_facebook.svg" alt="Facebook"></a>
-        </div>
-        <div class="creative-commons-zero">
-          <h2>Licencia</h2>
-          <a href="https://creativecommons.org/publicdomain/zero/1.0/deed.es"><img src="multimedia/creative_commons_zero.png" alt="Creative Commons Zero"></a>
-        </div>
-      </div>
-    </div>
-  </body>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</body>
+
 </html>
