@@ -1,0 +1,1 @@
+import{Tooltip}from"bootstrap";let tooltipTriggerList=[].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]')),tooltipList=tooltipTriggerList.map((function(t){return new Tooltip(t)}));

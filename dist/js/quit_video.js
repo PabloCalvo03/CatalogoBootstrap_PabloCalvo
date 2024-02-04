@@ -1,1 +1,1 @@
-quitVideo=document.getElementById("quitVideo"),videoContainer=document.getElementById("videoContainer");const quitVideoFunction=()=>{videoContainer.remove()};quitVideo.addEventListener("click",quitVideoFunction);
+const quitVideo=document.getElementById("quitVideo"),videoContainer=document.getElementById("videoContainer"),quitVideoFunction=()=>{videoContainer.remove()};quitVideo.addEventListener("click",quitVideoFunction);

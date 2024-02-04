@@ -1,0 +1,1 @@
+(self.webpackChunkmy_project=self.webpackChunkmy_project||[]).push([[287],{287:()=>{document.querySelectorAll(".dropdown-item").forEach((e=>{e.addEventListener("click",(function(){document.getElementById("selectedOption").innerText=e.innerText}))}))}}]);

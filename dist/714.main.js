@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkmy_project=self.webpackChunkmy_project||[]).push([[714],{714:(e,t,c)=>{c.r(t);var l=c(138);[].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]')).map((function(e){return new l.u(e)}))}}]);

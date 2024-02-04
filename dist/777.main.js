@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkmy_project=self.webpackChunkmy_project||[]).push([[777],{777:(e,t,n)=>{n.r(t);var c=n(138);const s=document.getElementById("liveToastBtn"),o=document.getElementById("liveToast");s&&s.addEventListener("click",(()=>{new c.FN(o).show()}))}}]);

@@ -1,54 +1,14 @@
-// Fuente de la pagina
-$primary-font-family: "Exo 2", sans-serif;
-
-// Colores de fondo
-$primary-bg-color: #263740;
-$secondary-bg-color: white; 
-
-// Color de fondo boton
-$button-border-color: #263740;
-
-// Color de fondo boton [hover]
-$button-hover-bg-color: #1f2528;
-
-// Sombra de contenedores
-$primary-box-shadow: 1px 1px 28px -10px rgba(0,0,0,0.82);
-
-// Tamaño de logos
-$logo-size: 60px;
-
-// Tamaño de iconos
-$icon-size: 22px;
-
-// Color de los textos
-$primary-font-color: #263740;
-$primary-font-color: gray;
-$secondary-font-color: white;
-$tertiary-font-color: rgb(93, 93, 93);
-
-// Color del borde de botones
-$button-border-color: #263740;
-
-// Color de los bordes de arriba y abajo de los links [hover]
-$link-border-hover-color: white;
-
-// Input color [valid]
-$input-color-valid: rgb(64, 255, 0);
-
-// Input color [invalid]
-$input-color-invalid: red;
-
-//Gap flex nav
-$nav-gap: 30px;
-
-// Nav font size
-$nav-font-size: 1rem;
-
-// Nav store font size
-$name-store-font-size: 1.5rem;
-
-// Gap options
-$options-gap: 20px;
-
 $primary: #263740;
+$success: #39525f;
+$danger: #dc3545;
+$secondary: #2e3c44;
+$info: #5f727c;
+
+$theme-colors: (
+    "primary": $primary,
+    "danger": $danger,
+    "success": $success,
+    "secondary": $secondary,
+    "info": $info,
+);
 

@@ -1,0 +1,1 @@
+const dropdownItems=document.querySelectorAll(".dropdown-item");dropdownItems.forEach((e=>{e.addEventListener("click",(function(){document.getElementById("selectedOption").innerText=e.innerText}))}));

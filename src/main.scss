@@ -1,29 +1,7 @@
-/*---------------------------------------------------------------------
-Project: Tienda de jabones
-Version: 1.0
-Last change: 16.11.2023
-Assigned to: Pablo Calvo Jiménez
-
-Component: main
-
-[Table of contents]
-
-1. body
-2. body.no-sidebar
-    - sidebar-container
-    - main-content-container
-3. layout-grid
-    - [MEDIA QUERY]
-4. video-container
-    - video-overlay
-        - video
-        - content
-    - i
-[ANIMACION]: SlideIn
-
----------------------------------------------------------------------*/
 @use './layout/header';
+
 @import "./base/variables";
+@import "./views/video_styles.scss";
 @import "./bootstrap_fixes/bootstrap_fixes";
 @import "bootstrap/scss/bootstrap";
 @import "~bootstrap-icons/font/bootstrap-icons.css";
