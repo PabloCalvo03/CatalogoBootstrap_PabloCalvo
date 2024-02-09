@@ -1,0 +1,1 @@
+(self.webpackChunkmy_project=self.webpackChunkmy_project||[]).push([[837],{837:()=>{const e=document.getElementById("quitVideo"),t=document.getElementById("videoContainer");e.addEventListener("click",(()=>{t.remove()}))}}]);

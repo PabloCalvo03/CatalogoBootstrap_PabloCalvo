@@ -201,6 +201,7 @@
               <br />
               <div class="form-group">
                 <label for="email">Email</label>
+                <div class="input-group">
                 <input
                   data-bs-toggle="tooltip"
                   data-bs-placement="top"
@@ -210,8 +211,11 @@
                   class="form-control"
                   id="email"
                   placeholder="pablocalvoj@gmail.com"
+                  aria-describedby="basic-addon2"
                   required
                 />
+                <span class="input-group-text" id="basic-addon2">@example.com</span>
+                </div>
               </div>
               <br />
               <div class="form-group">
@@ -261,6 +265,8 @@
               <br />
               <div class="form-group">
                 <label for="urlPaginaWeb">URL de la Página Web</label>
+                <div class="input-group">
+                <span class="input-group-text" id="basic-addon3">https://</span>
                 <input
                   data-bs-toggle="tooltip"
                   data-bs-placement="top"
@@ -271,7 +277,11 @@
                   id="urlPaginaWeb"
                   placeholder="https://pablo-calvojimenez.com"
                   pattern="https://pablo-calvojimenez.com"
+                  aria-describedby="basic-addon3"
                 />
+                <span class="input-group-text">.com</span>
+
+                </div>
               </div>
               <br />
               <div class="form-group">
