@@ -11,3 +11,15 @@ body{
     height: 100%;
     min-width: 400px;
 }
+body.dark-theme *{
+    background-color: #1a1a1a !important;
+    color: #ffffff !important;
+
+    &::placeholder {
+        color: #b3b3b3 !important;
+    }
+}
+
+#modeSwitcher {
+    cursor: pointer;
+}
